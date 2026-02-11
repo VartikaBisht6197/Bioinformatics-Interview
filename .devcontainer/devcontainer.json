@@ -1,19 +1,30 @@
 {
-    "name": "R & Bash Interview Env",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
-    "features": {
-        "ghcr.io/devcontainers/features/common-utils:1": {},
-        "ghcr.io/devcontainers/features/r-apt:1": {
-            "version": "latest"
-        }
+    "name": "R+Python Jupyter Env",
+    "build": {
+        "dockerfile": "Dockerfile"
     },
     "customizations": {
         "vscode": {
             "extensions": [
                 "REditorSupport.r",
-                "mads-hartmann.bash-ide-vscode"
+                "Ikuyadeu.r",
+                "ms-toolsai.jupyter",
+                "ms-python.python",
+                "ms-python.vscode-pylance"
             ]
         }
     },
-    "postCreateCommand": "R -e \"install.packages('languageserver', repos='https://cloud.r-project.org')\""
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "bash (main)": {
+                "path": "/bin/bash",
+                "args": [
+                    "-l",
+                    "-c",
+                    "micromamba activate main; exec bash"
+                ]
+            }
+        },
+        "terminal.integrated.defaultProfile.linux": "bash (main)"
+    }
 }
