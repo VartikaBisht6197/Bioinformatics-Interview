@@ -53,3 +53,9 @@ Print out only the 2nd column from `file3.txt` (within the `data` folder).
 
 ## Q9.  Sort a File
 Sort `file2.txt` (within the `data` folder) by the 2nd column.
+
+
+# Bioinformatics Interview – R Skills (R studio)
+```
+https://posit.cloud/spaces/752560/content/11894186
+```
