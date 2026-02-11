@@ -1,15 +1,16 @@
-name: Bioinformatics_Interview
+name: base
 channels:
   - conda-forge
   - bioconda
   - defaults
+
 dependencies:
   - python=3.11
   - r-base
   - r-irkernel
   - r-seqinr
-  - bioconductor-biostrings  
-  - r-ggplot2             
+  - bioconductor-biostrings
+  - r-ggplot2
   - jupyterlab
   - pip
   - pip:
