@@ -1,5 +1,5 @@
 {
-    "name": "R+Python Jupyter Env",
+    "name": "Bioinformatics Interview Env",
     "build": {
         "dockerfile": "Dockerfile"
     },
@@ -7,7 +7,6 @@
         "vscode": {
             "extensions": [
                 "REditorSupport.r",
-                "Ikuyadeu.r",
                 "ms-toolsai.jupyter",
                 "ms-python.python",
                 "ms-python.vscode-pylance"
@@ -15,16 +14,6 @@
         }
     },
     "settings": {
-        "terminal.integrated.profiles.linux": {
-            "bash (main)": {
-                "path": "/bin/bash",
-                "args": [
-                    "-l",
-                    "-c",
-                    "micromamba activate main; exec bash"
-                ]
-            }
-        },
-        "terminal.integrated.defaultProfile.linux": "bash (main)"
+        "terminal.integrated.defaultProfile.linux": "bash"
     }
 }
