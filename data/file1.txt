@@ -1,0 +1,4 @@
+geneA	5
+geneB	12
+geneC	2
+geneD	20

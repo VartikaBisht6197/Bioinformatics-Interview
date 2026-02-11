@@ -1,0 +1,11 @@
+geneA	5
+geneB	12
+geneC	2
+geneD	20
+geneA	5
+geneB	12
+geneC	2
+geneD	20
+geneB	12
+geneC	2
+geneD	20
