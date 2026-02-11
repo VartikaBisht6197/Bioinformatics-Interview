@@ -1,0 +1,19 @@
+{
+    "name": "R & Bash Interview Env",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:1": {},
+        "ghcr.io/devcontainers/features/r-apt:1": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "REditorSupport.r",
+                "mads-hartmann.bash-ide-vscode"
+            ]
+        }
+    },
+    "postCreateCommand": "R -e \"install.packages('languageserver', repos='https://cloud.r-project.org')\""
+}
