@@ -1,12 +1,9 @@
 FROM mambaorg/micromamba:1.5.1
 
-# Copy environment file
-COPY Bioinformatics_Interview.yml /tmp/Bioinformatics_Interview.yml
+COPY environment.yml /tmp/environment.yml
 
-# Install everything into base env
-RUN micromamba install -y -f /tmp/Bioinformatics_Interview.yml -n base && \
-    micromamba clean --all -f -y
+RUN micromamba install -y -n base -f /tmp/environment.yml && \
+    micromamba clean --all --yes
 
-# Initialize micromamba for all future shells
-SHELL ["bash", "-c"]
-RUN micromamba shell init -s bash -p /opt/conda
+# Ensure bash is login shell so conda activates
+SHELL ["/bin/bash", "-l", "-c"]
